@@ -1,0 +1,28 @@
+Welcome
+This is the first article of my blog. This blog is about my
+programming journey.
+
+About Myself
+My name is Federico Andrés Rodríguez, and I live in Buenos Aires, Argentina.
+I used to be an Industrial Engineer. At the end of 2015, bored with my job,
+I decided to switch to programming and started preparing for it by reading
+stuff about Ruby in my free time.
+By the beginning of 2016 I had quit my job and started studying programming full time,
+reading books and doing some ad honorem freelance work for friends in need for a website.
+In August I got a job as a full time Web Developper.
+I have fallen in love with programming, as I love solving problems and feel that
+this craft is problem solving at its purest form. My dream is to become a
+really good programmer and to build amazing stuff.
+This is my first attempt to contribute to the programming community.
+
+What I want this blog to be About
+I expect this blog to be a living document about a programmer's journey. by reading
+this blog you should find insights about programming and witness how a programmer
+changes his way of thinking as he sharpens his skills, gains experience and 
+becomes wiser.
+At first, I guess the articles will be more oriented to learning how to program
+but I expect to get into more technical stuff as time goes by and my understanding
+of some subjects grows. Topics will be very varied because I tend to get interested
+in very diverse subjects.
+I am also open to recommendations about topics for writting so
+feel free to email me with questions, suggestions or comments in general.
