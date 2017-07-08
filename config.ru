@@ -9,7 +9,7 @@ use Rack::TryStatic,
 
 # Serve 404 Template if page is not found
 run lambda { |env| 
-  four_oh_four = File.expand_path("../build/404/index.html", __FILE__)
+  four_oh_four_page = File.expand_path("../build/404/index.html", __FILE__)
   [404, { 'Content-Type' => 'text/html' }, File.read(four_oh_four_page)]
 }
 
