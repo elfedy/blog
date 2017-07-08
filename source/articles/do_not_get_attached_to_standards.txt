@@ -1,0 +1,2 @@
+Do not get attached to standards: Bad code is better than no code at all
+
