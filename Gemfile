@@ -19,3 +19,7 @@ gem "builder", "~> 3.0"
 
 # Add nokogiri for article summary
 gem "nokogiri"
+
+# Gems for Production
+gem "puma"
+gem "rack-contrib"
