@@ -11,7 +11,14 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
+    <div class="article-container">
+      <article>
+        <a href="/" class="article__back-to-index">Back to index</a>
+        <p class="article__date"><%= current_article.date.strftime('%Y %b %e') %></p>
+        <h2><%= current_article.title %></h2>
+        <%= yield %>
+      </article>
+    <div>
   </body>
   
   <footer class="footer">
@@ -26,7 +33,7 @@
     <p>
       You can contact me at:
       <a class="mail-link" href="mailto: federodriguez.88@gmail.com">
-        federodriguez.88@gmail.com
+        elfedyrodriguez@gmail.com
       </a>
     </p>
   </footer>

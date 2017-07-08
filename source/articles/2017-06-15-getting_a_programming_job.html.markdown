@@ -1,0 +1,94 @@
+---
+title: Going from not knowing about programming to getting a full time job as a web developer
+date: 2017-06-15
+---
+
+This post is half a story and half advice about the processes and strategies I used to
+teach myself how to program and get my first web development job.
+I expect it will be useful if you are in doubt about taking the self taught route in order to start a professional programming career.
+
+As I learned with Ruby on Rails, many of this is Ruby on Rails specific, but I think it can still be helpful as a general guideline, no matter what language/framework you begin with.
+
+###The Process
+I went through a seven step process that I think can be repeated by anyone wanting to be a web developer: 
+
+1- Setup a routine
+
+2- Choose a Programming Language and learn the basics
+
+3- Learning HTML, CSS and Design
+
+4- Learn a Web Development Framework
+
+5- Build your own application and upload it to GitHub
+
+6- Start the job search
+
+7- Keep Learning and building your portfolio
+
+Let’s get into each step in detail. 
+
+###1- Setup a Routine
+
+First of all, you need to decide how much time you can devote each day to the process and commit to it. You have to dedicate a fixed amount of hours everyday, the more time the better. I would not say that going full time on learning to program is the only way but you should strongly consider it as you will need to get a lot of concepts inside your head. If you try to practice one or two hours after work you will be tired, you will not have to the right mindset to learn this stuff and half of your allocated study time will be spent trying to remember what you learned the day before. Try to at least get a part time job, and dedicate 4-5 daily hours minimum. Your real job is now to become capable of building web applications and show your skills to potential employers. 
+
+I had the possibility to go at it full time as I had saved enough money to go without a job for more than a year. I also had the help of two senior web developers, that followed my progress every week and gave me lots of advice. You should try to get a mentor yourself as it is a key factor in accelerating the process. An experienced developer can tell you exactly what to learn, when to learn it, and lend you a hand in inserting yourself in the programming community.
+
+###2- Choose a Programming language and learn the basics
+You have to choose a programming language to start somewhere. I think the number one factor in your decision is having a mentor or friend that’s a web developer. If you do then the decision is done, choose the programming language that he/she uses the most.
+
+I chose Ruby because that is what my friends used. I found it to be quite easy to learn and also to have a wonderful community. Almost any question I had as a beginner was one Google search away from me.
+
+If you do not have any mentors, pick the language that is the most popular in web development at the moment. The reason for this is that it will have the most resources to learn from, the biggest community to ask questions to and the biggest number of job offers. At the time of this writing, that language is JavaScript, a language that you will have to eventually learn anyway if you are serious about web development, no matter what you choose first. 
+
+When I told my friends I wanted to learn to program they pointed me to [Learn Ruby the Hard Way by Zed Shaw](https://learnrubythehardway.org/book/). This book did an awesome job teaching me. If you are planning to start with Ruby (or [Python](https://learnpythonthehardway.org/book/)), I recommend this as a first step, go through the book, do all the study drills and do not think about anything else until you finish it.
+
+###3- Learn HTML, CSS and Design 
+HTML and CSS will be the tools you use to show users stuff, almost everything you see on a web page is produced by these two technologies. It is crucial that you learn it really well from the start because many entry-level jobs are about dealing with simple front-end adjustments that more senior developers are eager to delegate in order to concentrate in lower level stuff. Also, once you learn it well you will never forget it as you will, at least at this level in your career, use it almost every single day. I recommend you to get a book that covers both in depth. 
+
+Apart form HTML and CSS, I also learned the Bootstrap framework and its grid system. I would not recommend you to do that now as complex layouts can now be done efficiently with flex-box, a CSS feature now built in into most modern browsers. There’s even a CSS grid being implemented that may be fully supported by all browsers by the time you read this. So learn that or flex-box and be sure to be able to master layouts, learn Bootstrap only if it is required for a job you are applying.
+
+Another important thing to learn is a naming convention, that will help you structure your styles without having to think about naming that much. I like [BEM](http://getbem.com/naming/) quite a lot because its very straightforward.
+
+As an extra step I would also recommend you to learn basic design concepts. You will probably be doing all design for your first projects, so it is better to have some fundamentals and go-to rules so you can resolve design problems in an effective way. This skill will also be useful if you happen to deal with designers later in your career. I have read [Design for Hackers by David Kadavy](https://www.amazon.com/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956) and highly recommend it.
+
+###4- Learn a Web Framework
+After you feel comfortable and have done some html/css static pages, it is time to do some real web development. Here is when you learn how to use a web framework. A framework is an application used by many programmers in order to build things much faster than if they had to write their own code starting from a blank slate. It lets you get something up and running without the need to know all the details of how a web application really works.
+I went through some tutorials but the one I truly liked is [Michael Hartl’s Ruby on Rails Tutorial](https://www.railstutorial.org/book/beginning), this book is amazing, and its free. Since I’ve read this book, the author has added some git, bash and html/css tutorials. I’ve skimmed through some of them and looked great, so doing those before reading the Rails part is a very good idea to get some solid building blocks.
+
+You will absolutely need to learn how to use git at this point. Git is a version control system, it helps you keep track of changes and helps teams to work together on the same application at the same time. This is a crucial tool for professional web development so it is essential to master the basics.
+
+###5- Build an application and upload it to GitHub
+You might not feel like it but you now have the tools to build your first web application. Find inspiration somewhere, and idea for a simple website you may have or some friend that needs a website for a business. Offer yourself to do some freelance work for free as long as you can show it as part of your portfolio later.  
+
+I know its tempting to keep reading books and tutorials and ignoring the frightening idea of getting to code your own thing, knowing that it won’t be perfect and that you do not have a perfect guideline on how to proceed, but the sooner you get to it, the faster you’ll progress and get a programming job. It will probably be the first time you encounter the feeling of confusion, where you do not exactly know what to do or why, embrace that feeling as it will be with you every time you try to learn something new and apply it. The feeling will cease if you keep pushing through.
+
+Programmers share their code on a place called GitHub. Once you have finished your site, you should upload it there with a good readme that explains what it does and what technologies did you use. I have left a [sample application](https://github.com/elfedy/prana_factory) I did at that time. I haven’t touched it much since then so I think it will serve as a good reference.
+It is a good idea at this point to divide your routine by allocating 70% of your time coding your own application and 30% studying further. If you are taking the Rails route, I would recommend tackling the following:
+
+  * [Agile Web Development with Rails](https://pragprog.com/book/rails5/agile-web-development-with-rails-5): another book on Rails but that goes more in depth, it will help you reinforce what you learned in the first book and get deeper into Rails and its philosophy.
+
+  * Some resource that explains the HTTP protocol, and how the web works in general. Aim for a high level understanding, do not read the HTTP specs, memorize each possible request header or anything like that (You should do that MUCH later).
+
+  * [The Rails Guides](http://guides.rubyonrails.org/), the whole Model, View and Controller sections.
+
+###6- Start the job search
+As soon as you deploy your application, you can start by applying for jobs. I think where you apply differs from your country. But as a general rule you will have to build a good CV and a template for an email introducing yourself. You should be humble and not lie about your experience or knowledge. However, you should do your best to demonstrate your willingness to learn and ability to incorporate new concepts quickly and efficiently. If you were able to teach yourself how to program and have built a web application, that can be used as strong proof, do not be shy to show your work.
+
+You should try to get into programming communities, go to local meetups for your language and try to build a network, as there are many job offers that are passed along those groups.  That’s how I got my job: a known software developer of mine found a job posting in a mailing list, sent it to me and I mailed the company using the template i had prepared. After that I had a soft interview, followed by a technical interview. I prepared as best as i could, doing any Ruby coding exercise I could get my hands on. I was also given an assignment, a simple basic CRUD application (If you do not know what i mean, you will once you get to step 4), and I went hands on trying to show off everything I had learned at that time: styled it on the front end as best as I could, did unit and integration tests, uploaded the application to GitHub with a Readme and deployed a living version to Heroku. I took those interviews more as practice than as a chance of getting a real job, but that was it, I ended up landing the first programming job I was ever interviewed for. 
+
+###7- Keep learning and building your portfolio
+I got my job much quicker than I expected, but had i not been so lucky I would have divided my day in three parts: 
+
+The first part would be dedicated to job applications, tuning my CV and cover letter, asking questions in various communities, doing interviews, etc. 
+
+The second would be spent building new applications to show in my GitHub profile and improving the ones I had already uploaded. 
+
+The final third of my day would be dedicated to learning some extra concepts and technologies. Probably the next step is to get started with JavaScript and asynchronous requests. There’s an excellent free online book called [Eloquent JavaScript](http://eloquentjavascript.net/) by Marijn Haverbeke.
+
+Another valid option is to try and get freelance jobs and now charge for them. They will give you very valuable experience in dealing with clients and the work you do can help you build a stronger portfolio. 
+
+###Conclusion 
+If you follow this routine consistently, you will get a job sooner or later. Remember once you do, that this is only the start of your learning path. In fact, I think that there’s no point in this career where its safe to consider that you do not have to keep studying and learning anymore.
+
+

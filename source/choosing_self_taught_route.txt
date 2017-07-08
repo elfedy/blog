@@ -1,0 +1,24 @@
+
+Why I chose the self taugh route
+I did not know many things a Software Engineer does, and still don’t. However, I have put myself through an engineering degree, that gives me certain structure of thought
+that makes learning to program easier, as I had to learn many things that are somewhat similar to learning how to program.
+Althought I think going through a college degree is absolutely not the best way to learn things (Its expensive and ineficient), it still gives you social proof, and employers give importance to it. So, if you have it, it helps, if not, do not worry about it, you can get your social proof elsewhere.
+
+At the time I made the decision to get into programming, I was pretty old (27 at the time) to go for another college degree.
+During the years working as an Industrial Engineer, I arrived at the conclusion that
+the University was not the most efficient way to build skills to do a job. My thought always was
+"If I get an 18 year old kid and instead of send him to college I put him on a entry level job at a company, and only make him study stuff
+as he needs to, in 6 years (that is what it takes to graduate as an Engineer in Argentina) he
+will outperform any fresh graduate big time.
+
+Empirical experience is much more valuable than theoretical experience
+and many things taught at college are a waste of time, others you forget because you
+do not use them very much, others are only useful for people taking a definite career path.
+
+Why I didn't go to a bootcamp: I had to achieve this on a budget as I had quit my job to dedicate myself full time to learning
+and did not have any source of income
+I also had two friends who are senior programmers who offered to mentor me in my path
+I am a very good visual learner and a very bad auditory learner, I love learning stuff
+from reading books.
+
+Also there was the thrill of the challenge to go from 0 to we developer all by myself
