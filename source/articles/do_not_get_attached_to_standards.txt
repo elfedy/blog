@@ -1,2 +1,24 @@
-Do not get attached to standards: Bad code is better than no code at all
+Concept of this article
+Do not get attached to standards 
+the ultimate goal is to write software that looks good in the eyes of the user
+It is more valuable to write 3 mediocre applications than 1 perfect one
 
+When you start learning about programming you will hear lots of terms that are considered best practices, a framework/library that’s on, other ones that are dead. SOLID principles, TDD, Object Oriented Programming, Functional Programming, use Sublime, use Vim. Write small methods, do not use comments, write good comments.
+
+Do not listen to that voices too much, it is a good idea to get to know the trends, it is a good idea to learn different programming paradigms and its design patterns. But there are no set of practices that are the end all be all of programming
+
+(Different ideas about a good programming)
+You should learn all this things, but more important is to build lots of stuff, get used to finishing programs that you start and have a functional version of them.
+
+OOP: I went to the SOLID principles and got betting by the bug of wanting to extract everything into a PORO that had a single responsibility (Do a paragraph with all solid principles).
+
+
+#### The fear of not being perfect 
+
+#### The ultimate goal
+
+Redux example,
+
+#### Links about this
+Fun Fun function, the comments and the programming stages video
+The one with Jonathan Blow about games written / years lived
