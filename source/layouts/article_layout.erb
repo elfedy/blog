@@ -10,13 +10,16 @@
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
   </head>
+
   <body>
     <div class="article-container">
-      <article>
+      <article itemscope itemtype="http://schema.org/BlogPosting">
         <a href="/" class="article__back-to-index">Back to index</a>
-        <p class="article__date"><%= current_article.date.strftime('%Y %b %e') %></p>
-        <h2><%= current_article.title %></h2>
-        <%= yield %>
+        <time class="article__date" itemprop="datePublished"><%= current_article.date.strftime('%Y %b %e') %></time>
+        <h2 itemprop="name headline"><%= current_article.title %></h2>
+        <div itemprop="articleBody">
+          Hello
+        </div>
       </article>
     <div>
   </body>
