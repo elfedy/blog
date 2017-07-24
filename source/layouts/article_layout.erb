@@ -18,7 +18,7 @@
         <time class="article__date" itemprop="datePublished"><%= current_article.date.strftime('%Y %b %e') %></time>
         <h2 itemprop="name headline"><%= current_article.title %></h2>
         <div itemprop="articleBody">
-          Hello
+          <%= current_article.body %>
         </div>
       </article>
     <div>
