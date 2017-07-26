@@ -1,0 +1,63 @@
+---
+ title: Thoughts and rules about choosing and applying tools, frameworks and best practices in programming and web development 
+ date: 2017-07-25
+---
+
+My ultimate goal as a programmer is to write software that looks consistently amazing through the eyes of the user. This goal is very easy to forget while you are in the middle of learning and applying its infinite amount of tools and practices.
+
+I encountered the programming community to be a great one, there are infinite amount of resources you can use to learn and keep yourself informed. But surfing a huge community has its caveats. Its easy to lose sight of your real goal, get lost in trends or get guided by the wrong kind of information. This brings up some dilemmas about what to learn, what to use, how to use it and why. Most of this dilemmas do not have a straightforward solution but I think that you can start solving them by remembering your ultimate goal as a developer and follow from there. Here are some problems I encounter myself everyday and my thoughts on solving them.
+
+### Tools and frameworks. What to learn? How to keep up? Should I?
+
+More efficient solutions to common problems are invented every day. There are is always a new framework, tool or library coming that’s now the best thing to be invented ever. People are always writing articles about how to delete and replace all your current code that uses all these other old frameworks into the new one because nobody in its right state of mind would still be using that legacy stuff.
+
+Keeping up with the latest trends has its benefits, sometimes using a new tool will save you a lot of time, and the only way of taking advantage of this is knowing that the tool exists and knowing how to use it. Popular tools have been tested in production environments by thousands of people, with bugs and security issues always being fixed by the community. Knowing a lot of popular tools should also make you more employable.
+
+But there are other sides to this, from the technical perspective any time you add a new tool to your project or workflow, you are creating a dependency that is, mostly, out of your control. You never know if the code there is well written and tested or if it does what its supposed to do. You are also coupling yourself to a particular convention of doing things that may make your application less flexible. Do you really need that added complexity or can you roll your own much simpler solution?
+
+Additionally, there is the cost of learning and understanding the tool. There are lots of cases where the amount of time needed to learn and install the tool makes it much more expensive than the problem it solves.
+
+Tools and frameworks are means to an end. A piece of software is good because it does what the user expects it to, not because it was built using the latest tools and technologies.
+
+I think you should subscribe to newsletters and blogs that talk about latest technologies to keep up to date but do not spend a huge amount of time on this, half an hour a week or less will do. Also, do not learn every one of them because you just need to keep up. Wait until you have a problem that a tool solves and does it in a way that gives you considerable value before learning something and using it. Side projects are a great place to try new tools. 
+
+### How do I learn and apply best practices and programming paradigms?
+
+Programming has lots of best practices, techniques and paradigms. Object Oriented Programming, SOLID Principles, Functional Programming, TDD, BDD, it is impossible to name them all. Each of them has its promoters and detractors, and they get in and out of fashion just like everything else. There seems to be many “right” ways to code, and one does not know which one to choose. It feels that one has not only to keep learning, but also learn the right things. I have found myself spending a whole week reading articles to know if I should use Object Oriented Programming or Functional Programming. 
+
+Learning best practices and programming paradigms will make you a better programmer. You will incorporate solutions to common problems that have been designed by very smart people with lots of experience. It will make you think a lot about the code you write and start thinking not only about the current problem being solved, but the maintainability and reusability of the code you write. 
+
+These practices are a language commonly spoken by all programmers that you need to incorporate if you expect to work with different teams. They work as conventions will help you understand code written by a person who follows them. For example, if a team uses the MVC architecture, you will know that things are organized in a certain way. If a team uses TDD and OOP, you will expect to find lots of small classes and methods each doing a single thing. That type of architecture may have its advantages and disadvantages, but if you are working in a team like that you need to understand what they are trying to do, and adapt to that style. A team where all members understand and use the very same conventions is a very powerful one.
+
+I think the greatest disadvantage of starting learning best practices is that it brings into you the fear of not being perfect. I remember finishing my first book about object oriented design and wasting several hours at work writing and rewriting functions just to make sure they did not violate any of the SOLID principles. What I could have done in 30 minutes took the whole day, and I am still not sure to this day that my solution added more value than the initial 30 minute imperfect one. You should not be ashamed of your own solutions to problems, tutorials about best practices make you be afraid of every line of code you write and trick you, maybe without intention, that all the code should be written in the way they do it, without taking into account that the code in that tutorial is a well thought out example that tries to make a point, and most often does not resemble real life problems. Aim for perfection but do not be paralyzed by it, do not lose the ability to craft your own solutions, every best practice has it flaws and may get old. Crafting your own solutions in a way thought only by yourself is also a very valuable skill to learn.
+
+You also have to consider that there are many constraints when you are solving a problem in real life. There are time constraints, there is previous code, there are team conventions that may make a pattern more or less applicable. Best practice have its context, some serve for small programs, some are better for bigger programs, some serve for big teams, others are better used when coding in a small team or as a solo developer. When they tell you something like “always prefer small methods and small classes”, take that with a grain of salt, understand where it comes from and if it really applies to your current working environment.
+
+Tutorials about best practices may apply some patterns heavily and may tell you that every time you write code, you have to think about if that code you are writing is the best solution to your problem. That may be good advice, but I would add also add the following: every time you are about to refactor something, think if what you are about to do is the most valuable use of your resources (time) given your goals.
+
+On the technical side, I want to talk about best practices involving adding higher abstractions for your code. Be very careful with those as they are applied right away in examples made to teach that technique. In practice, you need to be very careful about what you are doing, as a badly made abstraction is much more costly than no abstraction at all. Be very defensive about adding a new abstraction, and make sure it adds a significant value to your application.
+
+Finally, it is very easy to get into wanting to write “good” or “clean” code and start measuring how good you are by how clean your code looks. It is my opinion that a good programmer is good when he writes good software efficiently. Techniques to write clean code are just a tool to achieve this, and this tool always has its tradeoffs, sometimes you lose performance, sometimes you lose time. Knowing when those tradeoffs are worth it is a skill that can only be learned and improved by practicing.
+
+### Conclusion: Some rules of the thumb I made up and links that will make you think
+
+Considering all of the above, has led me to some rules I follow in order to make decisions in my daily programming activities:
+
+1.- When I decide to learn something, I ask myself if I am making myself more capable of building better software faster. If I am not, I should be learning something else or dedicating that time to building real software instead.
+
+2.- I am super defensive about applying new learned “best practices” and technologies at work. I only do it if i see a lot of value, or if I am having problems with the current structure of the code. Work is not the place to practice new design patterns or some new coding style. I build dummy applications in my spare time just for that purpose.
+
+3.- I allocate a fixed part of my study time to coding side projects and solving real problems. Here I try to implement the new stuff I have been studying, but only one thing at a time. My main focus here is to practice building stuff that is awesome from an user point of view in the most efficient way possible.
+
+4.- I also have a fixed part of my study time to learn design patterns, programming languages, new features, etc, but I prioritize what I think will have the most impact in my current daily work.
+
+5.- When learning those, I do my best not get drawn into the hype and learn to identify the context on when this thing that I am learning works best and when it doesn’t.
+
+
+Finally, I want to share with you some resources that started to make me think about this stuff and that I find very valuable:
+
+* [Fun fun function](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q), an awesome you tube channel made by Mattias Johansson. He has a minimalist approach to being a professional programmer that I love. You should specially watch [this](https://www.youtube.com/watch?v=DFP6UDgVJtE), [this](https://www.youtube.com/watch?v=Bks59AaHe1c), and [this](https://www.youtube.com/watch?v=2qYll837a_0) videos.
+
+* [This talk](https://www.youtube.com/watch?v=JjDsP5n2kSM) by Jonathan Blow, an indie game developer.
+
+
