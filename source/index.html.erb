@@ -13,10 +13,12 @@ per_page: 10
 <div class="article-index">
   <% page_articles.each_with_index do |article, i| %>
     <div class="article-summary__container">
-      <article>
+      <article itemscope itemtype="http://schema.org/BlogPosting">
         <time class="article__date"><%= article.date.strftime('%Y %b %e') %></time>
-        <h2><%= link_to article.title, article %></h2>
-        <%= article.summary %>
+        <h2 itemprop="name headline"><%= link_to article.title, article %></h2>
+        <div>
+          <%= article.summary %>
+        </div>
       </article>
     </div>
   <% end %>
