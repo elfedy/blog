@@ -11,23 +11,25 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
-  </body>
-  
-  <footer class="footer">
-    <div class="footer__image-container">
-      <%= image_tag "Fede.jpg", class: "footer__image" %>
+    <div itemscope itemtype="http://schema.org/Blog">
+      <%= yield %>
     </div>
 
-    <div class="footer__body">
-    <p>
-      I am Federico Andrés Rodríguez. I write about programming.
-    </p>
-    <p>
-      You can contact me at:
-      <a class="mail-link" href="mailto: elfedyrodriguez@gmail.com">
-        elfedyrodriguez@gmail.com
-      </a>
-    </p>
-  </footer>
+    <footer class="footer">
+      <div class="footer__image-container">
+        <%= image_tag "Fede.jpg", class: "footer__image" %>
+      </div>
+
+      <div class="footer__body">
+      <p>
+        I am Federico Andrés Rodríguez. I write about programming.
+      </p>
+      <p>
+        You can contact me at:
+        <a class="mail-link" href="mailto: elfedyrodriguez@gmail.com">
+          elfedyrodriguez@gmail.com
+        </a>
+      </p>
+    </footer>
+  </body>
 </html>
