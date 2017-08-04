@@ -5,7 +5,7 @@
 
 My ultimate goal as a programmer is to write software that looks consistently amazing through the eyes of the user. This goal is very easy to forget while you are in the middle of learning and applying its infinite amount of tools and practices.
 
-I encountered the programming community to be a great one, there are infinite amount of resources you can use to learn and keep yourself informed. But surfing a huge community has its caveats. Its easy to lose sight of your real goal, get lost in trends or get guided by the wrong kind of information. This brings up some dilemmas about what to learn, what to use, how to use it and why. Most of this dilemmas do not have a straightforward solution but I think that you can start solving them by remembering your ultimate goal as a developer and follow from there. Here are some problems I encounter myself everyday and my thoughts on solving them.
+I encountered the programming community to be a great one, there are infinite amount of resources you can use to learn and keep yourself informed. But surfing a huge community has its caveats. It's easy to lose sight of your real goal, get lost in trends or get guided by the wrong kind of information. This brings up some dilemmas about what to learn, what to use, how to use it and why. Most of this dilemmas do not have a straightforward solution but I think that you can start solving them by remembering your ultimate goal as a developer and follow from there. Here are some problems I encounter myself everyday and my thoughts on solving them.
 
 ### Tools and frameworks. What to learn? How to keep up? Should I?
 
