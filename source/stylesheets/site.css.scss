@@ -1,5 +1,5 @@
 // Constants
-$title-color: #7d1935;
+$title-color: #586675;
 $subtitle-color: #c63d0f;
 $border-color: #aaa;
 $screen-xs: 768px;
@@ -9,24 +9,23 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Open Sans", sans-serif;
   height: 100%;
   width: 100%;
-  color: #555;
+  color: #333;
 }
 
 h1, h2, h3, h4 {
-  font-family: "Verdana Bold", bold;
   color: $title-color;
 }
 
 h2 {
-  font-size: 2.6em;
+  font-size: 2.2em;
   margin-top: 6px
 }
 
 h3 {
-  font-size: 1.7em;
+  font-size: 1.4em;
 }
 
 .article-index {
@@ -56,7 +55,8 @@ article {
   max-width: 600px;
   padding: 15px 30px;
   p {
-    line-height: 24px;
+    font-size: 1.4em;
+    line-height: 1.7em;
   }
 }
 
