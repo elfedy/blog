@@ -6,8 +6,8 @@ date: 2017-10-02
 If you want to work in web development, mastering how asynchronous things are handled in JavaScript is a must. I had a tough time understanding asynchronous programming. Not because it is a complex concept, but because I did not find a good place that puts it all together in a simple way. Here’s my humble attempt to do that. My idea is to introduce it small example after small example. Let’s start with some generalities.
 
 ### General Definitions
-JavaScript is single threaded but has a non blocking Input/Output (I/O) stream. What single threaded means is that it can only process one thing at a time. What non blocking I/O means is that whenever our JS program sends information to the outside world (makes an HTTP request, asks for information in a Database, etc), it never waits for a response to resume execution of the rest of the program.
-JavaScript also has the ability to listen to events from the outside world, such as when a page is loaded, a timer ends, a DOM element is clicked or a response from an HTTP request arrives. If we want to do something when that event occurs, we need to associate it with a function that will be called when that event is received. This function is know as “callback”.
+JavaScript is single threaded but has a non blocking Input/Output (I/O) stream. What single threaded means is that it can only process one thing at a time. What non blocking I/O means is that whenever our JS program sends information to the outside world (makes a HTTP request, asks for information in a Database, etc), it never waits for a response to resume execution of the rest of the program.
+JavaScript also has the ability to listen to events from the outside world, such as when a page is loaded, a timer ends, a DOM element is clicked or a response from a HTTP request arrives. If we want to do something when that event occurs, we need to associate it with a function that will be called when that event is received. This function is know as “callback”.
 
 #### The Event Loop
 As I said before, JavaScript can only execute one thing at a time. However, an event can happen anytime. In particular, one or several events can arrive when the interpreter is still executing some other instruction. That’s why the JS engine needs some sort of algorithm to handle the execution of things. This algorithm is called the Event Loop, and it basically consists in JS behaving the following way:
@@ -25,7 +25,7 @@ From the above, we can build some rules of the thumb to deal with asynchronous s
 
 1. When we are requesting information from the outside world, we need to know what types of future responses we can get.
 
-2. We need to listen to every one of those types and provide an adequate callback function for each to handle it accordingly. Everything we want to do after the event happens needs to be be directly or indirectly invoked by that callback.
+2. We need to listen to every one of those types and provide an adequate callback function for each to handle it accordingly. Everything we want to do after the event happens needs to be directly or indirectly invoked by that callback.
 
 3. We need to be aware that the response will be handled when JS has received the message and its single thread of execution has handled the previous blocks in its queue. 
 
@@ -85,7 +85,7 @@ This is what happens when executing the code:
 
 2. The second setTimeout is sent, and as it finishes (almost) immediately, JS adds the corresponding callback to the execution queue.
 
-3. The for block starts executing, logging the numbers form 1 to 99999.
+3. The for block starts executing, logging the numbers from 1 to 999999.
 
 4. Assuming the computer takes more than 10 milliseconds to print all numbers (which is my case), the second timeout is finished and its callback is added to the queue.
 
@@ -99,31 +99,31 @@ Another cool timer function is `setInterval`. It will add a callback to the exec
 Let’s have some fun with it:
 
 ```javascript
-const travelTerminal = function() {
-    console.log(Array(steps + 1).join(' ') + '|');
-    switch(direction) {
-      case 'right':
-         steps ++;
-        break;
-      case 'left':
-        steps --;
-        steps = steps  < 0 ? 0 : steps;
-        break;
-    }
+const travelTerminal = () => {
+  console.log(Array(steps + 1).join(' ') + '|');
+  switch(direction) {
+    case 'right':
+       steps ++;
+      break;
+    case 'left':
+      steps --;
+      steps = steps  < 0 ? 0 : steps;
+      break;
   }
+}
  
- const changeDirection = function() {
-    nextDirection = {
-      right: 'left',
-      left: 'right',
-    };
-    direction = nextDirection[direction];
- };
+const changeDirection = () => {
+  nextDirection = {
+    right: 'left',
+    left: 'right',
+  };
+  direction = nextDirection[direction];
+};
  
- let steps = 0;
- let direction = 'right';
- setInterval(changeDirection, 5000);
- setInterval(travelTerminal, 500);
+let steps = 0;
+let direction = 'right';
+setInterval(changeDirection, 5000);
+setInterval(travelTerminal, 500);
 ```
 
 ### Wrapping Up
