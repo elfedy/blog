@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="114" height="114" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"/>
+    </pattern>
+  </defs>
+  <path stroke-width="7" d="m7,20h98v72H7zl44,44q5,4 10,0l44-44M7,92l36-36m26,0 36,36" fill="none" style="stroke: rgb(51, 51, 51);"/>
+</svg>

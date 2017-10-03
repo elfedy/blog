@@ -5,35 +5,24 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|PT+Sans" 
+      rel="stylesheet">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Web Development and Programming | Federico Rodriguez" %></title>
     <% if current_page.data.meta_desc %>
       <meta name="description" content="A blog by Federico Rodriguez about Programming and Web Development">
     <% end %>
     <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "highlighting" %>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <div itemscope itemtype="http://schema.org/Blog">
-      <%= yield %>
-    </div>
-
-    <footer class="footer">
-      <div class="footer__image-container">
-        <%= image_tag "Fede.jpg", class: "footer__image" %>
+    <div class="container container__main">
+      <%= partial "header" %>
+      <div class="container container__body"
+        itemscope itemtype="http://schema.org/Blog">
+        <%= yield %>
       </div>
-
-      <div class="footer__body">
-      <p>
-        I am Federico Rodríguez. I write about programming.
-      </p>
-      <p>
-        You can contact me at:
-        <a class="mail-link" href="mailto: elfedyrodriguez@gmail.com">
-          elfedyrodriguez@gmail.com
-        </a>
-      </p>
-    </footer>
+    </div>
   </body>
 </html>

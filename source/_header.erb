@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header__image-container">
+      <%= image_tag "Fede.png", class: "header__image" %>
+    </div>
+
+    <div class="header__body">
+      <p>
+      I am Federico Rodríguez. I write about programming.
+      </p>
+      <ul class="header__links">
+        <li>
+          <a class="header__link" href="mailto: elfedyrodriguez@gmail.com">
+            <%= image_tag "email.svg", 
+              class: "header__icon header-icon--email" %>
+        </a>
+        </li>
+        <li>
+          <a class="header__link" target="_blank" href="https://twitter.com/elfedyrodriguez">
+            <%= image_tag "twitter.svg", 
+              class: "header__icon header-icon--twitter" %>
+        </a>
+        </li>
+      </ul>
+    </div>
+</header>

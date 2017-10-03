@@ -16,6 +16,20 @@ page '/*.txt', layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
+
+###
+# Markdown
+###
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+###
+# Code Highlight
+###
+
+activate :syntax
+
+
 ###
 # Helpers
 ###
