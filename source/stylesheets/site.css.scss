@@ -50,15 +50,23 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  @media(max-width: $screen-xs) {
+    flex-direction: column;
+  }
 }
 
 .container__body {
   width: 60%;
-  padding: 1em 3em;
+  padding: 1em 3em 3em 3em;
+  @media(max-width: $screen-xs) {
+    width: 100%;
+    padding: 1em 0em;
+  }
 }
 
 .container__article {
   padding: 3em 3em 0 3em;
+  max-width: 600px
 }
 
 
@@ -122,6 +130,7 @@ a {
   flex-direction: column;
   @media(max-width: $screen-xs) {
     align-items: center;
+    width: 100%;
   }
 }
 
