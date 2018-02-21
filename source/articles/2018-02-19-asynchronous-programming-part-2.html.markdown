@@ -4,7 +4,7 @@ date: 2018-02-19
 ---
 
 
-Last time we had fun with time functions. However, there are much more important and more powerful concepts related to asynchronous code. One of them is DOM Events.
+[Last time](/2017/10/02/asynchrounous-programming-part-1.html) we had fun with time functions. However, there are much more important and more powerful concepts related to asynchronous code. One of them is DOM Events.
 
 When using JS in the context of a Browser, we can be aware of lots of different things that happen during the user’s interaction with the web page. Most importantly, through the use of JS code, we have the ability to run code whenever an interaction or significant event happens.
 
@@ -16,12 +16,12 @@ Some examples of this are:
 * A user scrolling the page wll fire a `scroll` event targeting the document element.
 * User typing a key on the keyboard will fire the `keydown`, `keypress` and `keyup` events on the document element.
 * A form being submitted will fire a `submit` event targeting that form.
-* A resource (ex: an image) that has finished loading will fire a `load` event targeting the document element.
+* A resource (e.g.: an image) that has finished loading will fire a `load` event targeting the document element.
 
 In order to do whatever we want with events, we need to take the following steps:
 
 1. Identify the browser event that we want to react to and what DOM object does the event target when it happens.
-2. Add and event listener to that event and specify a callback to be added to the execution queue whenever the event happens. There are several ways to do this, but the most common one is calling the [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) function on the element that the event will target.
+2. Add an event listener to that event and specify a callback to be added to the execution queue whenever the event happens. There are several ways to do this, but the most common one is calling the [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) function on the element that the event will target.
 3. Whenever that events occurs on a user interaction with the web page, the callback will be run and will be passed an [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) object as an argument to the callback. This object has lots of properties with information about an event that we have at our disposal within the callback.
 
 ### A simple example
@@ -51,21 +51,21 @@ We will start by creating buttons that change the color of a box.
 <script>
   // defining the callbacks here
   const turnRed = () => {
-    box = document.querySelector(".box");
+    box = document.querySelector('.box');
     box.style = 'background-color: red;'
   }
 
   const turnBlue = () => {
-    box = document.querySelector(".box");
+    box = document.querySelector('.box');
     box.style = 'background-color: blue;'
   }
 
   // Adding the corresponding event listener to each button
-  turnRedButton = document.querySelector(".turn-red");
-  turnRedButton.addEventListener("click", turnRed);
+  const turnRedButton = document.querySelector('.turn-red');
+  turnRedButton.addEventListener('click', turnRed);
 
-  turnBlueButton = document.querySelector(".turn-blue");
-  turnBlueButton.addEventListener("click", turnBlue);
+  const turnBlueButton = document.querySelector('.turn-blue');
+  turnBlueButton.addEventListener('click', turnBlue);
 </script>
 ```
 <div class="code__sample">
@@ -97,10 +97,10 @@ We will start by creating buttons that change the color of a box.
     }
 
     // Adding an event listener to the button
-    turnRedButton = document.querySelector(".turn-red");
+    const turnRedButton = document.querySelector(".turn-red");
     turnRedButton.addEventListener("click", turnRed);
 
-    turnBlueButton = document.querySelector(".turn-blue");
+    const turnBlueButton = document.querySelector(".turn-blue");
     turnBlueButton.addEventListener("click", turnBlue);
   </script>
 </div>
@@ -114,7 +114,7 @@ Here is the thought process I described above:
 3. We click one of the buttons and the magic happens…
 
 ### The Event object
-In the last example we used a callback that took no arguments. The event handler actually receives an [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) object as an argument that we can use to get data about the event. Inside de callback, we then have access to that data to do anything we want.
+In the last example we used a callback that took no arguments. The event handler actually receives an [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) object as an argument that we can use to get data about the event. Inside the callback, we then have access to that data to do anything we want.
 
 ```html
 <div class="boxes">
@@ -253,7 +253,7 @@ All that we seen here is asynchronous code and the same rules apply for it. In p
 A quick way to prove this is to go to the last example (either in this article or in your own .html file), open the web inspector’s console and print a long series of numbers
 
 ```javascript 
-for(var i = 1; i < 100000 ; i++) { console.log(i) };
+for(let i = 1; i < 100000 ; i++) { console.log(i) };
 ```
 
 while the numbers are printing, try clicking on a red box. You will see the the box does not change its color until all the numbers are printed. That is because when you fire the “click” event, the code is not run automatically. The corresponding callback is added to the execution queue and will be run whenever the browser’s engine finishes running everything it needs to run before the callback gets his turn to be executed. 
@@ -280,7 +280,7 @@ Let’s show this by creating a minion spawner!
   const spawnNextMinion = () => {
     if(isSpawning) {
       let minion = document.createElement('div');
-      minion.classList.add("minion");
+      minion.classList.add('minion');
       container.appendChild(minion);
       setTimeout(spawnNextMinion, 1000);
     }
@@ -291,7 +291,7 @@ Let’s show this by creating a minion spawner!
     isSpawning = !isSpawning
     e.preventDefault();
     e.target.innerText = isSpawning ? 
-      "Stop Spawning!" : "Continue Spawning!"
+      'Stop Spawning!' : 'Continue Spawning!'
     if(isSpawning) { spawnNextMinion() };
   });
 
@@ -330,7 +330,7 @@ Let’s show this by creating a minion spawner!
 
   const spawnNextMinion = () => {
     if(isSpawning) {
-      let minion = document.createElement('div');
+      const minion = document.createElement('div');
       minion.classList.add("minion");
       container.appendChild(minion);
       setTimeout(spawnNextMinion, 1000);
