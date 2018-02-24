@@ -105,6 +105,7 @@ We will start by creating buttons that change the color of a box.
   </script>
 </div>
 
+
 Here is the thought process I described above:
 
 1. We want to react to the user clicking the button by changing the box color to red or blue depending on the button he/she clicks.

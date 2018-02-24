@@ -56,7 +56,7 @@ h4 {
 }
 
 .container__body {
-  width: 60%;
+  width: 80%;
   padding: 1em 3em 3em 3em;
   @media(max-width: $screen-xs) {
     width: 100%;
@@ -66,12 +66,15 @@ h4 {
 
 .container__article {
   padding: 3em 3em 0 3em;
-  max-width: 600px
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 
 // Articles
 .article-index {
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,8 +97,13 @@ article {
   //max-width: 700px;
   //padding: 15px 30px;
   p {
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+
+  li {
+    font-size: 1.2em;
+    line-height: 1.6em;
   }
 
 }
@@ -186,4 +194,36 @@ a {
 
 pre {
   padding: 1em;
+}
+
+//article footer
+.container__bottom-navigation {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom-navigation__previous {
+  p {
+    font-size: 20px;
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: auto;
+  width: 40%;
+}
+
+.bottom-navigation__next {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  width: 40%;
+}
+
+.bottom-navigation__arrow {
+  margin: 0 30px;
+  font-size: 40px;
+  font-weight: bold;
 }

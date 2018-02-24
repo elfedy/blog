@@ -28,7 +28,21 @@
             </div>
           </article>
         </div>
-      <div>
+        <div class="container__bottom-navigation">
+          <% previous_article, next_article = current_article.previous_article, current_article.next_article %>
+          <% if previous_article %>
+            <a href="<%= previous_article.url %>" class="bottom-navigation__previous">
+              <div class="bottom-navigation__arrow"><</div>
+              <div><%= previous_article.title%></div>
+            </a>
+          <% end %>
+          <% if next_article %>
+            <a href="<%= next_article.url %>" class="bottom-navigation__next">
+              <div><%= next_article.title %></div>
+              <div class="bottom-navigation__arrow">></div>
+            </a>
+          <% end %>
+        </div>
     </div>
   </body>
 </html>

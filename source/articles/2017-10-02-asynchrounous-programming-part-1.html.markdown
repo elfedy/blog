@@ -129,6 +129,6 @@ setInterval(travelTerminal, 500);
 ### Wrapping Up
 We’ve seen the main concepts of asynchronous programming and played a little bit with timers. If you have managed to grasp these concepts, the rest will be quite easy because it consists of pretty much the same idea but with different names and data structures. 
 
-There is more to timers than what I explained here. For more information you should check the [MDN docs](https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Timers)
-Next time we will be dealing with events in the DOM.
+There is more to timers than what I explained here. For more information you should check the [MDN docs](https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Timers).
+[Next time](/2018/02/19/asynchronous-programming-part-2.html) we will be dealing with events in the DOM.
 
