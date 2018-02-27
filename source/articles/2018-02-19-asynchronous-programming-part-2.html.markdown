@@ -13,15 +13,21 @@ In browser terminology, all the things happening that we can do something about 
 Some examples of this are:
 
 * A user clicking on a link will fire a `click` event associated with that link.
+
 * A user scrolling the page wll fire a `scroll` event targeting the document element.
+
 * User typing a key on the keyboard will fire the `keydown`, `keypress` and `keyup` events on the document element.
+
 * A form being submitted will fire a `submit` event targeting that form.
+
 * A resource (e.g.: an image) that has finished loading will fire a `load` event targeting the document element.
 
 In order to do whatever we want with events, we need to take the following steps:
 
 1. Identify the browser event that we want to react to and what DOM object does the event target when it happens.
+
 2. Add an event listener to that event and specify a callback to be added to the execution queue whenever the event happens. There are several ways to do this, but the most common one is calling the [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) function on the element that the event will target.
+
 3. Whenever that events occurs on a user interaction with the web page, the callback will be run and will be passed an [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) object as an argument to the callback. This object has lots of properties with information about an event that we have at our disposal within the callback.
 
 ### A simple example
