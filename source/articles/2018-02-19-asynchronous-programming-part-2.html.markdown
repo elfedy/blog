@@ -2,8 +2,6 @@
 title: An introduction to JavaScript Asynchronous Programming - Part 2 | DOM Events
 date: 2018-02-19
 ---
-
-
 [Last time](/2017/10/02/asynchrounous-programming-part-1.html) we had fun with time functions. However, there are much more important and more powerful concepts related to asynchronous code. One of them is DOM Events.
 
 When using JS in the context of a Browser, we can be aware of lots of different things that happen during the user’s interaction with the web page. Most importantly, through the use of JS code, we have the ability to run code whenever an interaction or significant event happens.

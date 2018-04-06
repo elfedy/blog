@@ -1,0 +1,128 @@
+---
+title: Testing Custom Form Helpers in Phoenix
+date: 2018-03-31
+---
+
+I found this [great article by Jose Valim](http://blog.plataformatec.com.br/2016/09/dynamic-forms-with-phoenix/) where he talks about building custom form helpers in Phoenix. I consider these kind of helpers to be a great place to add unit tests. The reason for this is that they are often used in many places and lots of edge cases/customizations may come up. As we progress on building an application, we risk breaking old functionality when we introduce new one. Unit tests will let us quickly check that everything is working as expected.
+
+This article shows how to write some simple unit tests for functions that work with forms. This is also a good way to expose one of the things that I like the most about Phoenix: everything that's part of the framework feels very composable and its easy to understand how it works. Therefore, isolating and testing every element of our application becomes quite simple. 
+
+## The original code
+We will be testing the function from the article that generates the same markup as a Phoenix generator:
+
+```elixir
+defmodule TestingFormHelpers.InputHelpers do
+  use Phoenix.HTML
+  
+  def input(form, field) do
+    type = Phoenix.HTML.Form.input_type(form, field)
+
+    wrapper_opts = [class: "form-group"]
+    label_opts = [class: "control-label"]
+    input_opts = [class: "form-control"]
+
+    content_tag :div, wrapper_opts do
+      label = label(form, field, humanize(field), label_opts)
+      input = 
+        apply(
+          Phoenix.HTML.Form, 
+          type, 
+          [form, field, input_opts]
+      )
+      error = 
+        TestingFormHelpersWeb.ErrorHelpers.error_tag(
+          form, 
+          field
+        ) || ""
+
+      [label, input, error]
+    end
+  end
+end
+```
+
+When called inside a form, which is passesd as the first argument of the function, this helper turns this:
+
+```
+input f, :field_name
+```
+
+into this:
+
+```
+<div class="form-group">
+  <%= label f, :field_name, class: "control-label" %>
+  <%= text_input f, :field_name, class: "form-control" %>
+  <%= error_tag f, :field_name %>
+</div>
+```
+
+## Writing the tests
+In order to test our function, we need a `%Phoenix.HTML.Form{}` struct to pass as a first argument to the function. We can create one using [Phoenix.HTML.FormData.to_form/2](https://hexdocs.pm/phoenix_html/Phoenix.HTML.FormData.html#to_form/2), this transforms a struct that complies with the `FormData` protocol into a form struct. In Phoenix, there are two structs that comply with this protocol: `Plug.Conn` and `Ecto.Changeset`.
+
+Let's use a changeset as it is what we will generally be using in forms. To build one, we can use a mock schema module defined inside the same test module or in a new file, for example `test/support/some_schema.ex`.
+
+```elixir
+defmodule TestingFormHelpers.SomeSchema do
+  use Ecto.Schema
+
+  schema "some_schemas" do
+    field(:some_field, :string)
+  end
+end
+```
+
+Inside the test, we use `Ecto.Changeset.cast`, pass it to the `to_form\2` function and invoke the genereted html as a string to assert the values are being created correctly.
+
+```elixir
+defmodule TestingFormHelpers.InputHelpersTest do
+  use ExUnit.Case
+  alias TestingFormHelpers.InputHelpers
+
+  test "renders text input with phoenix-generator-style wrappers" do
+    changeset =
+      Ecto.Changeset.cast(
+        %TestingFormHelpers.SomeSchema{}, 
+        %{some_field: "Some Value"}, 
+        [:some_field]
+      )
+
+    form = Phoenix.HTML.FormData.to_form(changeset, [])
+
+    html = 
+      Phoenix.HTML.safe_to_string(
+        InputHelpers.input(form, :some_field)
+      )
+
+    assert(html =~ "<div class=\"form-group\"")
+    assert(html =~ "<label class=\"control-label\"")
+    assert(html =~ "<input class=\"form-control\"")
+    assert(html =~ "type=\"text\"")
+    assert(html =~ "name=\"some_schema[some_field]\"")
+    assert(html =~ "value=\"Some Value\"")
+  end
+end
+```
+We can also test that when the changeset has errors, the correct error message is shown. Keep in mind that in order for the form object to show the errors, the changeset we are transforming into a form struct needs to have an action applied to it. That is why we are using `Ecto.Changeset.apply_action/2`.
+
+```elixir
+test "renders errors correctly" do
+  {:error, changeset} =
+    Ecto.Changeset.cast(
+      %TestingFormHelpers.SomeSchema{}, 
+      %{some_field: "Some Value"}, 
+      [:some_field]
+    )
+    |> Ecto.Changeset.validate_length(:some_field, max: 3)
+    |> Ecto.Changeset.apply_action(:insert)
+
+  form = Phoenix.HTML.FormData.to_form(changeset, [])
+
+  html = 
+    Phoenix.HTML.safe_to_string(
+      InputHelpers.input(form, :some_field)
+    )
+
+  assert(html =~ "should be at most 3 character(s)")
+end
+```
