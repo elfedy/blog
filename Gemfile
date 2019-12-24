@@ -21,7 +21,9 @@ gem "middleman-syntax"
 gem "builder", "~> 3.0"
 
 # Add nokogiri for article summary
-gem "nokogiri"
+gem "nokogiri", ">= 1.10.4"
+
+
 
 # Gems for Production
 gem "puma"
