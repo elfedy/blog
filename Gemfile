@@ -14,7 +14,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem "middleman", "~> 4.3"
 gem "middleman-blog"
 
-gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem 'redcarpet', '~> 3.5'
 gem "middleman-syntax"
 
 # For feed.xml.builder
